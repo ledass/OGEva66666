@@ -58,7 +58,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"「𝐎𝐍𝐑[{get_size(file.file_size)}]-☢-{file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"「🫧[{get_size(file.file_size)}]-☢-{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -67,10 +67,10 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"「𝐎𝐍𝐑[{file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"「🫧[{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
                 InlineKeyboardButton(
-                    text=f"「𝐎𝐍𝐑[{get_size(file.file_size)}",
+                    text=f"「🫧[{get_size(file.file_size)}",
                     callback_data=f'files_#{file.file_id}',
                 ),
             ]
@@ -374,7 +374,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "start":
         buttons = [[            
             InlineKeyboardButton(' 🆘 Help ', callback_data='help'),
-            InlineKeyboardButton('🧑🏻‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ', url=f"https://t.me/BOT_UPD4TES")
+            InlineKeyboardButton('🧑🏻‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ', url=f"https://t.me/+QbWh1eEL0v4wM2Zl")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -684,7 +684,7 @@ async def auto_filter(client, msg):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"「𝐎𝐍𝐑[[{get_size(file.file_size)}]--{file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"「🫧[[{get_size(file.file_size)}]--{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -693,11 +693,11 @@ async def auto_filter(client, msg):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"「𝐎𝐍𝐑[{file.file_name}",
+                    text=f"「🫧[{file.file_name}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"「𝐎𝐍𝐑[{get_size(file.file_size)}",
+                    text=f"「🫧[{get_size(file.file_size)}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
             ]
