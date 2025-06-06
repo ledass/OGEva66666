@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from info import CHANNELS, DATABASE_URI
-from database.ia_filterdb import save_file2, save_file3, save_file4, save_file5, check_file
+from database.ia_filterdb import save_file2, save_file3, save_file4, check_file
 
 media_filter = filters.document | filters.video | filters.audio
 
