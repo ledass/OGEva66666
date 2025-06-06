@@ -32,12 +32,12 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split('-1002395940309')] if auth_grp else None
 
 # MongoDB information
-DATABASE_NAME = environ.get('DATABASE_NAME', "")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', '')
-DATABASE_URI2 = environ.get('DATABASE_URI2', "")
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_URI3 = environ.get('DATABASE_URI3', "")
-DATABASE_URI4 = environ.get('DATABASE_URI4', "")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'empuraanfiles')
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Db22008:Db22008@cluster0.gerriqf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Db12008:Db12008@cluster0.mfgiymd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI3 = environ.get('DATABASE_URI3', "mongodb+srv://Db32008:Db32008@cluster0.hbrpwtu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI4 = environ.get('DATABASE_URI4', "mongodb+srv://Db42008:Db42008@cluster0.tkdtkvn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 # FSUB
 auth_channel = environ.get('AUTH_CHANNEL')
