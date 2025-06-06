@@ -14,10 +14,6 @@ from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL
 from utils import temp
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
-from dotenv import load_dotenv
-
-# Load variables from .env file
-load_dotenv()
 
 
 # for prevent stoping the bot after 1 week
