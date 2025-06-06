@@ -13,9 +13,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ('API_ID', '11824466'))
+API_HASH = environ('API_HASH', '42665ffe4407fbc3f59c412caa9d84d3')
+BOT_TOKEN = "7919041525:AAHWM8FTxOhmi8h4SCbD-b5uzbKA3fhGgoM"
 
 # Bot settings
 BOT_START_TIME = time()
@@ -24,7 +24,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://envs.sh/XWI.jpg https://envs.sh/XWn.jpg https://envs.sh/XWA.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7579162275').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5130458445').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002622302693').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -50,7 +50,7 @@ JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 # Others
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 MAX_B_TN = environ.get("MAX_B_TN", "10")
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002197582453))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002417761112'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'movie_requesting_ww')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
