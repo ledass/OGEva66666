@@ -66,7 +66,7 @@ class Media4(Document):
         indexes = ('$file_name', )
         collection_name = COLLECTION_NAME
 
-@instance5.register
+'''@instance5.register
 class Media5(Document):
     file_id = fields.StrField(attribute='_id')
     file_ref = fields.StrField(allow_none=True)
@@ -78,6 +78,7 @@ class Media5(Document):
     class Metaa:
         indexes = ('$file_name', )
         collection_name = COLLECTION_NAME
+        '''
         
 async def check_file(media):
     """Check if file is present in the database"""
