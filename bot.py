@@ -9,12 +9,12 @@ logging.getLogger("imdbpy").setLevel(logging.ERROR)
 
 from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
-from database.ia_filterdb import Media
 from database.users_chats_db import db
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL
 from utils import temp
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
+
 
 # for prevent stoping the bot after 1 week
 logging.getLogger("asyncio").setLevel(logging.CRITICAL -1)
@@ -48,7 +48,6 @@ class Bot(Client):
         temp.BANNED_USERS = b_users
         temp.BANNED_CHATS = b_chats
         await super().start()
-        await Media.ensure_indexes()
         me = await self.get_me()
         temp.ME = me.id
         temp.U_NAME = me.username

@@ -13,10 +13,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
-
+API_ID = int(environ.get('API_ID', '11824466'))  # or raise Exception("Missing API_ID")
+API_HASH = environ.get('API_HASH', '5afd3ea9d0018ed654ae39a87aee62c7')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7919041525:AAHWM8FTxOhmi8h4SCbD-b5uzbKA3fhGgoM')
 # Bot settings
 BOT_START_TIME = time()
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -24,7 +23,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://envs.sh/XWI.jpg https://envs.sh/XWn.jpg https://envs.sh/XWA.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7579162275').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5130458445').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002622302693').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -32,9 +31,12 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split('-1002395940309')] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://mubaarakharis:kLwKRxzSLefSWphR@dani32.4tm6y.mongodb.net/?retryWrites=true&w=majority&appName=Dani32")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vjcollection')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'empuraanfiles')
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://Db22008:Db22008@cluster0.gerriqf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Db12008:Db12008@cluster0.mfgiymd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI3 = environ.get('DATABASE_URI3', "mongodb+srv://Db32008:Db32008@cluster0.hbrpwtu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI4 = environ.get('DATABASE_URI4', "mongodb+srv://Db42008:Db42008@cluster0.tkdtkvn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 # FSUB
 auth_channel = environ.get('AUTH_CHANNEL')
@@ -47,7 +49,7 @@ JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 # Others
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 MAX_B_TN = environ.get("MAX_B_TN", "10")
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002197582453))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002417761112'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'movie_requesting_ww')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
